@@ -19,7 +19,7 @@
 *   **Premium Interactive Frontend**: Modern visual aesthetics featuring glassmorphism, fluid animations, custom card UI controls, dynamic auto-scrolling, and responsive layouts.
 *   **Pre-packaged Datasets**:
     *   `responses.csv`: Standardized responses mapping for all 36 key customer categories.
-    *   `dataset/banking_support.csv`: A trimmed ~100KB dataset with 660+ sample ticketing support records for training, validation, and analytics.
+    *   `dataset/banking_support.csv`: A unique customer support dataset containing ~10,000 queries (~1.8 MB) curated by the author.
 
 ---
 
@@ -134,7 +134,7 @@ Before classification, every query undergoes the following steps:
 *   **Stopword Removal**: Eliminating common English words (e.g., "the", "is") using the NLTK library to focus on intent-carrying keywords (e.g., "locked", "blocked", "transfer").
 
 ### 3. Dataset & Training
-*   **Size**: ~10,000 synthetic banking queries.
+*   **Size**: ~10,000 unique banking customer support queries.
 *   **Categories**: 36 unique banking intents (e.g., UPI, Account Management, ATM, KYC).
 *   **Optimization**: To resolve confusion between similar categories (like 'Account Management' vs 'Account Closure'), custom 'boost rows' were added to the training set to emphasize distinct keywords.
 *   **Performance**: Achieved 100% accuracy on the target test set containing critical troubleshooting scenarios.
@@ -166,7 +166,7 @@ print(f"Prediction: {prediction} (Decision Score: {decision_score:.4f})")
 ## 📊 Datasets
 
 *   **[responses.csv](file:///Users/soham/Developer/Tekpair%20SecurePay%20Assistant/responses.csv)**: Contains primary responses matching the 36 critical banking domains (including UPI, KYC, Cheque, Credit Score, FD, Dormant Accounts, etc.).
-*   **[dataset/banking_support.csv](file:///Users/soham/Developer/Tekpair%20SecurePay%20Assistant/dataset/banking_support.csv)**: Contains sample synthetic support tickets (IDs, Category, Priority, Question, and Response) curated to match an approximate 100KB footprint, ideal for test runs, model retraining, or indexing.
+*   **[dataset/banking_support.csv](file:///Users/soham/Developer/Tekpair%20SecurePay%20Assistant/dataset/banking_support.csv)**: A completely unique dataset containing ~10,000 banking customer support tickets (1.8 MB) carefully curated by the author, ideal for test runs, model retraining, or indexing.
 
 ---
 
